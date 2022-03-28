@@ -144,6 +144,8 @@ def features_from_image_list(
             dtype_to_fm[f_conf["dtype"]](str(cache_path),
                                          f_conf.load_cache_on_init,
                                          level_prefix)
+    # free GPU resources
+    extractor.model.cpu()
     return feature_manager
 
 
