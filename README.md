@@ -207,8 +207,8 @@ To refine a 3D model stored on file:
 from pixsfm.refine_colmap import PixSfM
 refiner = PixSfM()
 model, _, _, = refiner.refine_reconstruction(
-    path_to_input_model,
     path_to_output_model,
+    path_to_input_model,
     path_to_image_dir,
 )
 ```
